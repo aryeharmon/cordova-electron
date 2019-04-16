@@ -26,7 +26,8 @@ const feed = `${server}/update/${process.platform}/${app.getVersion()}`;
 autoUpdater.setFeedURL(feed)
 setInterval(() => {
   autoUpdater.checkForUpdates()
-}, 60000)
+}, 60000);
+autoUpdater.checkForUpdates();
 autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
   const dialogOpts = {
     type: 'info',
